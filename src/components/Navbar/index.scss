@@ -1,0 +1,106 @@
+@import '../../App.scss';
+
+.navbar {
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    position: sticky;
+    background-color: $primary;
+    top: 0;
+    width: 100%;
+
+}
+
+.navbar .nav-search {
+    margin: auto 10%;
+    width: 80%;
+    display: inline-flex;
+
+    >img {
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    >form {
+        display: inline-flex;
+        width: 100%;
+    }
+}
+
+.navbar .nav-search>form .nav-search-input {
+    font-size: 16px;
+    background: white;
+    border: none;
+    height: 39px;
+    box-sizing: border-box;
+    width: 88%;
+    border-radius: 2px 0 0 2px;
+    padding: 7px 10px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+}
+
+.navbar .nav-search .nav-search-btn {
+    background: $secondary-2;
+    border: none;
+    height: 39px;
+    width: 39px;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+}
+
+@media (max-width: 915px) {
+    .navbar .nav-search>form {
+        width: 90%;
+        margin: auto 30px;
+
+        .nav-search-input {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .navbar .nav-search>form {
+        width: 80%;
+        margin: auto 30px;
+
+        .nav-search-input {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .navbar .nav-search>form {
+        width: 80%;
+        margin: auto 20px;
+
+        .nav-search-input {
+            width: 90%;
+        }
+
+    }
+}
+
+@media (max-width:400px) {
+    .navbar .nav-search {
+        width: 90%;
+        margin: auto 2%;
+
+        >img {
+            margin-right: 10px;
+        }
+
+        >form {
+            width: 90%;
+            margin: auto 10px;
+
+            .nav-search-input {
+                width: 90%;
+            }
+        }
+    }
+}

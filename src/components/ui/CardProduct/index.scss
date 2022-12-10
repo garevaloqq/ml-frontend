@@ -1,0 +1,52 @@
+.card {
+    width: calc(100% - 20px);
+    background-color: white;
+    display: inline-flex;
+    margin: 10px;
+}
+
+.card-logo {
+    padding: 10px;
+    width: 160px;
+    height: 160px;
+}
+
+.card-content {
+    padding: 10px;
+
+    .city-mobile {
+        display: none;
+    }
+
+    .price {
+        display: block;
+        font-size: 24px;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+
+        .decimal {
+            font-size: 10px;
+        }
+    }
+}
+
+.card-actions {
+    margin: auto 10px auto auto;
+    min-width: 100px;
+}
+
+@media (max-width: 500px) {
+    .card-actions {
+        display: none;
+    }
+    .card-content {
+        padding: 0 10px;
+
+        .city-mobile {
+            display: block;
+        }
+    }
+}

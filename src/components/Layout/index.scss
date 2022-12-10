@@ -1,0 +1,13 @@
+.main-layout {
+    height: auto;
+    background: #EEEEEE;
+    padding: 0 10px 4vw 10px;
+    width: 80%;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    .main-layout {
+        width: 95%;
+    }
+}
