@@ -1,1 +1,0 @@
-export const CACHE_KEY_LIST_HOME = 'home-product-list';

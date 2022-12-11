@@ -1,7 +1,7 @@
 import { FC, memo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Breadcrumb, ListProduct } from "src/components";
-import { useGetProducts } from "src/modules/home/hooks/useHome";
+import { useGetProducts } from "src/modules/search/hooks/useSearch";
 
 const SearchPage: FC = () => {
   const [searchParams] = useSearchParams();

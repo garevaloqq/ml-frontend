@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import { Layout } from "./components";
 import { MainProvider } from "./contexts";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
@@ -11,7 +12,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <MainProvider>
-      <App />
+      <Layout>
+        <App />
+      </Layout>
     </MainProvider>
   </React.StrictMode>
 );

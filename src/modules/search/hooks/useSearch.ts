@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useQuery } from "react-query";
-import { CACHE_KEY_LIST_HOME } from "../constants/home";
-import HomeApiService from "../services/HomeApiService";
+import { CACHE_KEY_LIST_PRODUCT } from "../constants/search";
+import SearchApiService from "../services/SearchApiService";
 
 export const useGetProducts = (query: string) => {
   const queryConfig = useMemo(() => {
@@ -9,9 +9,9 @@ export const useGetProducts = (query: string) => {
   }, [query]);
 
   return useQuery(
-    [CACHE_KEY_LIST_HOME, query],
+    [CACHE_KEY_LIST_PRODUCT, query],
     async () => {
-      const { data } = await HomeApiService.search(query);
+      const { data } = await SearchApiService.search(query);
       return data.items?.slice(0, 4);
     },
     queryConfig

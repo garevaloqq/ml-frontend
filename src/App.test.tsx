@@ -1,9 +1,10 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen, waitFor } from "src/utils/test-utils";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("Render home Page", async () => {
   render(<App />);
-  const linkElement = screen.getByText(/Search../i);
-  expect(linkElement).toBeInTheDocument();
+  await waitFor(() => {
+    const title = screen.getByText(/Welcome to Mercado libre/i);
+    expect(title).toBeInTheDocument();
+  });
 });

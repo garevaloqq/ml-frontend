@@ -1,4 +1,4 @@
-import { SyntheticEvent, useCallback, useState } from "react";
+import React, { SyntheticEvent, useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./index.scss";
 import iconSearch from "../../assets/ic_Search.png";
@@ -26,9 +26,10 @@ const Navbar = () => {
             type="search"
             placeholder="Nunca dejes de buscar"
             value={searchValue}
+            data-testid="input-search"
             onChange={(e) => setSearchValue(e.target.value)}
           />
-          <button type="submit" className="nav-search-btn">
+          <button type="submit" className="nav-search-btn" data-testid="submit-button">
             <img src={iconSearch} alt="search" />
           </button>
         </form>

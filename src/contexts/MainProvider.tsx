@@ -5,7 +5,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from "react-query";
-import { BrowserRouter } from "react-router-dom";
+import {BrowserRouter as Router} from 'react-router-dom';
 
 type Props = {
   children?: React.ReactNode;
@@ -26,7 +26,7 @@ const queryClient = new QueryClient({
 const MainProvider: FC<Props> = ({ children }) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>{children}</BrowserRouter>
+      <Router>{children}</Router>
     </QueryClientProvider>
   );
 };

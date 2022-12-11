@@ -18,7 +18,7 @@ const CardProduct = ({ id, title, price, picture , city_name }: Props) => {
         <p>{title}</p>
         <div className="city-mobile">{city_name}</div>
       </div>
-      <div className="card-actions">{city_name}</div>
+      <div className="card-actions" data-testid="visible-city">{city_name}</div>
     </div>
   );
 };

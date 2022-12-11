@@ -29,6 +29,9 @@
       ],
       "@assets/*": [
         "assets/*"
+      ],
+      "@utils/*": [
+        "utils/*"
       ]
     },
     "incremental": true
