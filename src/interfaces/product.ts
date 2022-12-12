@@ -27,6 +27,7 @@ export interface ISearchResult {
 
 export interface IProductResult {
   author: IAuthor;
+  categories: string[];
   item: {
     id: string;
     title: string;

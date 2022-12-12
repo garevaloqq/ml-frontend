@@ -5,7 +5,7 @@ export const mockDataSearch = {
     name: "Geider",
     lastName: "Arevalo Quintana",
   },
-  categories: ["Uno"],
+  categories: ["Celulares y Teléfonos", "Celulares y Smartphones"],
   items: [
     {
       id: "MLA931449399",
@@ -16,34 +16,6 @@ export const mockDataSearch = {
         decimals: 0,
       },
       picture: "http://http2.mlstatic.com/D_865864-MLA46114990464_052021-I.jpg",
-      condition: "Nuevo",
-      free_shipping: true,
-      category_id: "MLA1055",
-      city_name: "Palermo",
-    },
-    {
-      id: "MLA1142215643",
-      title: "Apple iPhone 13 (128 Gb) - Blanco Estelar",
-      price: {
-        currency: "ARS",
-        amount: 352000,
-        decimals: 0,
-      },
-      picture: "http://http2.mlstatic.com/D_736168-MLA47781742030_102021-I.jpg",
-      condition: "Nuevo",
-      free_shipping: true,
-      category_id: "MLA1055",
-      city_name: "Martínez",
-    },
-    {
-      id: "MLA1134247449",
-      title: "Apple iPhone SE (3ª Generación, 128 Gb) - Blanco Estelar",
-      price: {
-        currency: "ARS",
-        amount: 213499,
-        decimals: 0,
-      },
-      picture: "http://http2.mlstatic.com/D_990308-MLA52140925580_102022-I.jpg",
       condition: "Nuevo",
       free_shipping: true,
       category_id: "MLA1055",
@@ -63,13 +35,40 @@ export const mockDataSearch = {
       category_id: "MLA1055",
       city_name: "Palermo",
     },
+    {
+      id: "MLA1134247449",
+      title: "Apple iPhone SE (3ª Generación, 128 Gb) - Blanco Estelar",
+      price: {
+        currency: "ARS",
+        amount: 213499,
+        decimals: 0,
+      },
+      picture: "http://http2.mlstatic.com/D_990308-MLA52140925580_102022-I.jpg",
+      condition: "Nuevo",
+      free_shipping: true,
+      category_id: "MLA1055",
+      city_name: "Palermo",
+    },
+    {
+      id: "MLA1109016617",
+      title: "Apple iPhone 13 (128 Gb) - Azul Medianoche",
+      price: {
+        currency: "ARS",
+        amount: 354999,
+        decimals: 0,
+      },
+      picture: "http://http2.mlstatic.com/D_973345-MLA47781591382_102021-I.jpg",
+      condition: "Nuevo",
+      free_shipping: true,
+      category_id: "MLA1055",
+      city_name: "Palermo",
+    },
   ],
 };
 
 export function useGetProductsHook() {
   return useQuery("getProductsHook", () => mockDataSearch);
 }
-
 
 export function useGetOneProductHook() {
   return useQuery("getOneProductHook", () => mockDataSearch.items[0]);
