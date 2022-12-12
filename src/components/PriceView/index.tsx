@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import { currency as utils } from "src/utils";
 import "./index.scss";
 
@@ -8,7 +9,6 @@ type Props = {
   decimals: number;
 };
 
-//TODO: Que hago con el currency
 const PriceView: FC<Props> = ({ amount, decimals }) => {
   const formattedPrice = utils.format(amount);
   const formattedDecimals = `${decimals}0`;

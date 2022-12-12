@@ -1,4 +1,5 @@
 import { FC, memo } from "react";
+
 import PageLoader from "src/components/PageLoader";
 import { IProduct } from "src/interfaces";
 import CardProduct from "../CardProduct";
