@@ -1,0 +1,13 @@
+.container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 100%;
+}
+
+.content {
+    display: grid;
+    place-items: center;
+}

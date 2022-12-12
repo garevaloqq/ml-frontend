@@ -12,7 +12,7 @@ export const useGetProducts = (id: string) => {
     [CACHE_KEY_ONE_PRODUCT, id],
     async () => {
       const { data } = await ProductApiService.getOne(id);
-      return data.item;
+      return data?.item;
     },
     queryConfig
   );

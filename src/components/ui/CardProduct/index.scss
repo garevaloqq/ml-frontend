@@ -51,6 +51,16 @@
 .card-actions {
     margin: auto 10px auto auto;
     min-width: 100px;
+
+    .free_shipping_img {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+        background-image: url("../../../assets/ic_shipping.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
 }
 
 @media (max-width: 500px) {
