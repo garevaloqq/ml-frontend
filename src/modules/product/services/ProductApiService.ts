@@ -9,7 +9,7 @@ class ProductApiService {
     this.url = url;
   }
 
-  public getOne(id: string) {
+  public getProduct(id: string) {
     return fetch(`${this.defaultOptions.baseURI}${this.url}/${id}`).then((res) =>
       res.json()
     );

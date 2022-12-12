@@ -1,6 +1,4 @@
 export const format = (value: number) => {
-  //TODO: Cual es la moneda que se pone aca
-
   // Crear formateador
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -9,5 +7,5 @@ export const format = (value: number) => {
     maximumFractionDigits: 0,
   });
 
-  return formatter.format(value); //$2,500.00
+  return formatter.format(value); //$2,500
 };

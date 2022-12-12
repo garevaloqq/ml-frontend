@@ -9,7 +9,7 @@ class HomeApiService {
     this.url = url;
   }
 
-  public search(query: string) {
+  public getProducts(query: string) {
     return fetch(`${this.defaultOptions.baseURI}${this.url}${query}`).then(
       (res) => res.json()
     );
