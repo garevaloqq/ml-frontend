@@ -1,4 +1,5 @@
 import { FC, ReactNode } from "react";
+
 import Navbar from "../Navbar";
 import "./index.scss";
 
@@ -10,7 +11,7 @@ const Layout: FC<Props> = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main style={{ background: "#EEEEEE" }}>
+      <main className="main">
         <div className="main-layout">{children}</div>
       </main>
     </>

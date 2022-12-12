@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+
 import { PriceView } from "src/components";
 import { IProduct } from "src/interfaces";
 import "./index.scss";

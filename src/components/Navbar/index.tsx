@@ -1,5 +1,6 @@
-import React, { SyntheticEvent, useCallback, useState } from "react";
+import { SyntheticEvent, useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import "./index.scss";
 import iconSearch from "../../assets/ic_Search.png";
 import logo from "../../assets/Logo_ML.png";

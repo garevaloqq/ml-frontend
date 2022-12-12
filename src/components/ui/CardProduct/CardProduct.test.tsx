@@ -1,3 +1,5 @@
+import "@testing-library/jest-dom/extend-expect";
+
 import {
   render,
   screen,
@@ -5,7 +7,6 @@ import {
   cleanup,
   renderHook,
 } from "src/utils/test-utils";
-import "@testing-library/jest-dom/extend-expect";
 import CardProduct from ".";
 import { useGetOneProductHook } from "src/mockHooks";
 import { MainProvider as wrapper } from "src/contexts";
@@ -26,7 +27,6 @@ it("Test card by query iphone Product", async () => {
   renderPage(dataProduct);
 
   expect(screen.getByAltText(dataProduct.title)).toBeInTheDocument();
-  expect(screen.getByText(dataProduct.title)).toBeInTheDocument();
 
   await waitFor(() => {
     const element = screen.getByTestId("visible-city");

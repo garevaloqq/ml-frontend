@@ -1,3 +1,5 @@
+import "@testing-library/jest-dom/extend-expect";
+
 import {
   render,
   screen,
@@ -5,7 +7,6 @@ import {
   cleanup,
   renderHook,
 } from "src/utils/test-utils";
-import "@testing-library/jest-dom/extend-expect";
 import ListProduct from ".";
 import { useGetProductsHook } from "src/mockHooks";
 import { MainProvider as wrapper } from "src/contexts";
