@@ -5,7 +5,14 @@ import "./index.scss";
 
 interface Props extends IProduct {}
 
-const CardProduct = ({ id, title, price, picture , city_name }: Props) => {
+const CardProduct = ({
+  id,
+  title,
+  price,
+  picture,
+  city_name,
+  free_shipping,
+}: Props) => {
   const navigate = useNavigate();
 
   return (
@@ -14,11 +21,16 @@ const CardProduct = ({ id, title, price, picture , city_name }: Props) => {
         <img width={160} height={160} src={picture} alt={title} />
       </div>
       <div className="card-content">
-        <PriceView {...price}/>
+        <div className="section-price">
+          <PriceView {...price} />
+          {!!free_shipping && <div className="free_shipping_img" />}
+        </div>
         <p>{title}</p>
         <div className="city-mobile">{city_name}</div>
       </div>
-      <div className="card-actions" data-testid="visible-city">{city_name}</div>
+      <div className="card-actions" data-testid="visible-city">
+        {city_name}
+      </div>
     </div>
   );
 };

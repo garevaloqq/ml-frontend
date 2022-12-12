@@ -18,17 +18,32 @@
         display: none;
     }
 
-    .price {
-        display: block;
-        font-size: 24px;
-        margin-block-start: 0.67em;
-        margin-block-end: 0.67em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-weight: bold;
+    .section-price {
+        display: inline-flex;
+        align-items: center;
 
-        .decimal {
-            font-size: 10px;
+        .price {
+            display: block;
+            font-size: 24px;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+
+            .decimal {
+                font-size: 10px;
+            }
+        }
+
+        .free_shipping_img {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            background-image: url("../../../assets/ic_shipping.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
         }
     }
 }
@@ -42,8 +57,17 @@
     .card-actions {
         display: none;
     }
+
     .card-content {
         padding: 0 10px;
+
+        .section-price {
+            display: block;
+
+            .free_shipping_img {
+                margin-left: 0;
+            }
+        }
 
         .city-mobile {
             display: block;
