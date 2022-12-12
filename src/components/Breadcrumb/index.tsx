@@ -1,43 +1,34 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import "./index.scss";
 
-function Breadcrumbs() {
-  const location = useLocation();
+interface Props {
+  categories: string[];
+}
+
+function Breadcrumbs({ categories }: Props) {
+  const lastIndex = categories.length - 1;
 
   return (
     <nav>
-      <Link
-        to="/"
-        className={
-          location.pathname === "/"
-            ? "breadcrumb-active"
-            : "breadcrumb-not-active"
+      {categories.map((category, idx) => {
+        if (idx === lastIndex) {
+          return (
+            <Link key={idx} to="/" className="breadcrumb-active">
+              {category}
+            </Link>
+          );
         }
-      >
-        Home
-      </Link>
-      <span className="breadcrumb-arrow">&gt;</span>
-      <Link
-        to="/products"
-        className={
-          location.pathname.startsWith("/products")
-            ? "breadcrumb-active"
-            : "breadcrumb-not-active"
-        }
-      >
-        Products
-      </Link>
-      <span className="breadcrumb-arrow">&gt;</span>
-      <Link
-        to="/products/1"
-        className={
-          location.pathname === "/products/1"
-            ? "breadcrumb-active"
-            : "breadcrumb-not-active"
-        }
-      >
-        Product 1
-      </Link>
+
+        return (
+          <>
+            <Link key={idx} to="/" className="breadcrumb-not-active">
+              {category}
+            </Link>
+            <span className="breadcrumb-arrow">&gt;</span>
+          </>
+        );
+      })}
     </nav>
   );
 }
