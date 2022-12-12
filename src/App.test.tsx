@@ -4,7 +4,7 @@ import App from "./App";
 test("Render home Page", async () => {
   render(<App />);
   await waitFor(() => {
-    const title = screen.getByText(/Welcome to Mercado libre/i);
+    const title = screen.getByText(/Bienvenido a Mercado libre/i);
     expect(title).toBeInTheDocument();
   });
 });
