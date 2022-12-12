@@ -5,7 +5,7 @@ describe("Testing Home page rendered", () => {
   it("Test render search placeholder", async () => {
     render(<HomePage />);
     expect(
-      screen.getByText(/Welcome to Mercado libre/i)
+      screen.getByText(/Bienvenido a Mercado libre/i)
     ).toBeInTheDocument();
   });
 });

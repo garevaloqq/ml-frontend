@@ -5,7 +5,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from "react-query";
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom";
 
 type Props = {
   children?: React.ReactNode;

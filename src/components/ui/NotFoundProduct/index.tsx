@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+
 import "./index.scss";
 
 type Props = {
@@ -11,7 +12,7 @@ export default function NotFoundProduct({ id }: Props) {
   return (
     <div className="container">
       <div className="content">
-        <h1>Product not found</h1>
+        <h1>Producto no encontrado</h1>
         <p>{id}</p>
         <Link
           to={".."}
@@ -20,7 +21,7 @@ export default function NotFoundProduct({ id }: Props) {
             navigate(-1);
           }}
         >
-          Go back
+          Ir atrás
         </Link>
       </div>
     </div>
