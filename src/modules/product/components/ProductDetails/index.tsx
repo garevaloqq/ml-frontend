@@ -1,6 +1,8 @@
 import { FC } from "react";
+
 import { PriceView } from "src/components";
 import { IProduct } from "src/interfaces";
+import SoldQuantity from "../SoldQuantity";
 import "./index.scss";
 
 interface Props extends IProduct {}
@@ -13,22 +15,18 @@ interface ResponsiveProps {
     decimals: number;
   };
   sold_quantity: number;
+  condition: string;
 }
 
 const CardActionResponsive: FC<ResponsiveProps> = ({
   sold_quantity,
   title,
   price,
+  condition,
 }) => {
   return (
     <div className="card-actions-responsive">
-      <span className="sold-quantity">{`Nuevo ${
-        sold_quantity === 0
-          ? ""
-          : sold_quantity === 1
-          ? "- 1 vendido"
-          : "- " + sold_quantity + " vendidos"
-      }`}</span>
+      <SoldQuantity sold_quantity={sold_quantity} condition={condition} />
       <h1 className="name">{title}</h1>
       <div className="buy-action">
         <div>
@@ -47,6 +45,7 @@ const ProductDetails: FC<Props> = ({
   price,
   description,
   sold_quantity,
+  condition,
 }) => {
   return (
     <div className="card">
@@ -56,6 +55,7 @@ const ProductDetails: FC<Props> = ({
           price={price}
           sold_quantity={sold_quantity || 0}
           title={title}
+          condition={condition}
         />
         <div className="card-description">
           <h1>Descripción del producto</h1>
@@ -63,13 +63,10 @@ const ProductDetails: FC<Props> = ({
         </div>
       </div>
       <div className="card-actions">
-        <span className="sold-quantity">{`Nuevo ${
-          sold_quantity === 0
-            ? ""
-            : sold_quantity === 1
-            ? "- 1 vendido"
-            : "- " + sold_quantity + " vendidos"
-        }`}</span>
+        <SoldQuantity
+          sold_quantity={sold_quantity || 0}
+          condition={condition}
+        />
         <h1 className="name">{title}</h1>
         <div className="amount">
           <PriceView {...price} />
