@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
+
 import "./App.scss";
 import { PageLoader } from "./components";
 import routes from "./routes";
